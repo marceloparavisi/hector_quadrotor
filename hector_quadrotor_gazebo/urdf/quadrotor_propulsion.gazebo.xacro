@@ -16,7 +16,7 @@
         <motorStatusRate>0.0</motorStatusRate>
         <triggerTopic></triggerTopic>
         <topicName></topicName>
-        <pwmTopicName></pwmTopicName>
+        <pwmTopicName>motor_pwm</pwmTopicName>
         <supplyTopic></supplyTopic>
         <wrenchTopic></wrenchTopic>
         <statusTopic></statusTopic>

@@ -387,8 +387,9 @@ bool QuadrotorPropulsion::processQueue(const ros::Time &timestamp, const ros::Du
     while(!command_queue_.empty()) {
       hector_uav_msgs::MotorPWMConstPtr new_motor_voltage = command_queue_.front();
       ros::Time new_time = new_motor_voltage->header.stamp;
-
+      ROS_DEBUG_NAMED("quadrotor_propulsion", "Setting voltage!%f <= %f <= %f", min, new_time, max);
       if (new_time.isZero() || (new_time >= min && new_time <= max)) {
+        
         setVoltage(*new_motor_voltage);
         command_queue_.pop();
         new_command = true;
