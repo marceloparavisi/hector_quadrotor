@@ -220,7 +220,7 @@ void GazeboQuadrotorAerodynamics::Update()
   }
 
   // set force and torque in gazebo
-std::cerr<<"\n GazeboQuadrotorAerodynamics::AddRelativeForce: "<<force;
+//std::cerr<<"\n GazeboQuadrotorAerodynamics::AddRelativeForce: "<<force;
   link->AddRelativeForce(force);
 #if (GAZEBO_MAJOR_VERSION >= 8)
   link->AddRelativeTorque(torque - link->GetInertial()->CoG().Cross(force));
