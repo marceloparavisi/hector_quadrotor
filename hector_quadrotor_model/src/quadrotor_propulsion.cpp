@@ -413,13 +413,14 @@ bool QuadrotorPropulsion::processQueue(const ros::Time &timestamp, const ros::Du
         if (command_condition_.timed_wait(lock, wait.toBoost())) continue;
       } else {
         lock.unlock();
-        callback_queue->callAvailable(wait);
+        //callback_queue->callAvailable(wait);
+        callback_queue->callAvailable();
         lock.lock();
         if (!command_queue_.empty()) continue;
       }
 
-      ROS_ERROR_NAMED("quadrotor_propulsion", "Command timed out. Disabled motors.");
-      shutdown();
+      //ROS_ERROR_NAMED("quadrotor_propulsion", "Command timed out. Disabled motors.");
+      //shutdown();
     }
 
   } while(false);

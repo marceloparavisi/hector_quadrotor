@@ -10,9 +10,9 @@
         <updateRate>0.0</updateRate>
         <bodyName>base_link</bodyName>
         <frameId>$(arg base_link_frame)</frameId>
-        <controlRate>100.0</controlRate>
-        <controlTolerance>0.01</controlTolerance>
-        <controlDelay>0.01</controlDelay>
+        <controlRate>10.0</controlRate>
+        <controlTolerance>0.1</controlTolerance>
+        <controlDelay>0.1</controlDelay>
         <motorStatusRate>0.0</motorStatusRate>
         <triggerTopic></triggerTopic>
         <topicName></topicName>
