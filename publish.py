@@ -12,7 +12,8 @@ def talker():
 	_motorPWM = MotorPWM();
 	_motorPWM.header.stamp =rospy.Time.now();
 	_motorPWM.header.frame_id="world";
-	_motorPWM.pwm = [250,250,250,250];
+	v = 140;
+	_motorPWM.pwm = [v,v,v,v];
         pub.publish(_motorPWM)
         rate.sleep()
 

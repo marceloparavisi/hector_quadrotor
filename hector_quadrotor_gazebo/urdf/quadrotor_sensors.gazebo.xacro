@@ -19,7 +19,7 @@
           </plugin>
 
           <plugin name="quadrotor_baro_sim" filename="libhector_gazebo_ros_baro.so">
-            <updateRate>10.0</updateRate>
+            <updateRate>100.0</updateRate>
             <bodyName>base_link</bodyName>
             <frameId>$(arg base_link_frame)</frameId>
             <topicName>pressure_height</topicName>
@@ -30,7 +30,7 @@
           </plugin>
 
           <plugin name="quadrotor_magnetic_sim" filename="libhector_gazebo_ros_magnetic.so">
-            <updateRate>10.0</updateRate>
+            <updateRate>100.0</updateRate>
             <bodyName>base_link</bodyName>
             <frameId>$(arg base_link_frame)</frameId>
             <topicName>magnetic</topicName>
